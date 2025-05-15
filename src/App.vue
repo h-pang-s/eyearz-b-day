@@ -188,7 +188,7 @@
               id="rounded-img"
               class="w-[60%] h-[120%] flex justify-center align-center"
               :style="{
-                backgroundImage: `url('@/assets/images/2.png')`,
+                backgroundImage: `url('./assets/images/2.png')`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'contain',
                 transform: `translateY(2vh)`,
@@ -196,7 +196,7 @@
             >
               <motion.img
                 v-show="step == 11"
-                src="@/assets/images/heart.png"
+                src="./assets/images/heart.png"
                 class="absolute w-[5vw] h-[5vw] cursor-pointer"
                 :initial="{ scale: 0, opacity: 0 }"
                 :animate="{ scale: [1, 1.1], opacity: 1, x: '1.5vw', y: '15vw' }"
@@ -278,7 +278,7 @@ const checkPassword = () => {
 }
 
 // ✅ 오디오 객체 만들기
-const myAudio = new Audio('@/assets/audio/love_is_at_the_Milkyway_Cafe.mp3')
+const myAudio = new Audio('./assets/audio/love_is_at_the_Milkyway_Cafe.mp3')
 myAudio.volume = 1 // 볼륨 조절 가능 (0 ~ 1)
 myAudio.loop = true // 볼륨 조절 가능 (0 ~ 1)
 const isMusicStart = ref(false)
@@ -295,7 +295,7 @@ const wHeight = ref('300vw')
 const sakuras = new Array(80).fill().map(() => {
   const size = Math.random() * 1 + 1
   return {
-    backgroundImage: `/assets/images/s${parseInt(Math.random() * 4 + 1)}.png`,
+    backgroundImage: `./assets/images/s${parseInt(Math.random() * 4 + 1)}.png`,
     duration: Math.random() * 40,
     style: {
       width: size + 'vw',
@@ -309,7 +309,7 @@ const sakuras = new Array(80).fill().map(() => {
 const flowers = new Array(150).fill().map(() => {
   const size = Math.random() * 3 + 1
   return {
-    backgroundImage: `/assets/images/f${parseInt(Math.random() * 7 + 1)}.png`,
+    backgroundImage: `./assets/images/f${parseInt(Math.random() * 7 + 1)}.png`,
     duration: Math.random() * 5,
     style: {
       width: size + 'vw',
