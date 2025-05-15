@@ -16,7 +16,7 @@
       class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[calc(15vw+15vh)] aspect-square"
       :style="{
         cursor: 'pointer',
-        backgroundImage: `url(${isOpen ? '../assets/images/cake.png' : '../assets/images/box.png'})`,
+        backgroundImage: `url(${isOpen ? '@/assets/images/cake.png' : '@/assets/images/box.png'})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
       }"
@@ -33,7 +33,7 @@
     <motion.div
       class="fixed w-[30vw] h-[50vh] text-white flex justify-center items-center aspect-1/2"
       style="
-        background-image: url('../assets/images/2.png');
+        background-image: url('@/assets/images/2.png');
         background-repeat: no-repeat;
         background-size: contain;
       "
@@ -49,7 +49,7 @@
     <motion.div
       class="fixed w-[30vw] h-[50vh] text-white flex justify-center items-center aspect-1/2"
       style="
-        background-image: url('../assets/images/1.png');
+        background-image: url('@/assets/images/1.png');
         background-repeat: no-repeat;
         background-size: contain;
       "
@@ -73,7 +73,7 @@
         v-if="isOpen"
         class="w-[80vw] h-[80vh]"
         style="
-          background-image: url('../assets/images/boom.png');
+          background-image: url('@/assets/images/boom.png');
           background-repeat: no-repeat;
           background-size: cover;
         "
@@ -115,7 +115,7 @@ const wHeight = window.innerHeight
 
 const friends = [
   {
-    backgroundImage: "url('../assets/images/p1.png')",
+    backgroundImage: "url('@/assets/images/p1.png')",
     right: '0vw',
     top: '0vh',
     rotate: '18deg',
@@ -124,7 +124,7 @@ const friends = [
     aspectRatio: 1,
   },
   {
-    backgroundImage: "url('../assets/images/p2.png')",
+    backgroundImage: "url('@/assets/images/p2.png')",
     left: '40vw',
     top: '0vh',
     rotate: '-20deg',
@@ -133,7 +133,7 @@ const friends = [
     aspectRatio: 1,
   },
   {
-    backgroundImage: "url('../assets/images/p3.png')",
+    backgroundImage: "url('@/assets/images/p3.png')",
     left: '-5vw',
     top: '20vh',
     rotate: '20deg',
@@ -142,7 +142,7 @@ const friends = [
     aspectRatio: 1 / 2,
   },
   {
-    backgroundImage: "url('../assets/images/p4.png')",
+    backgroundImage: "url('@/assets/images/p4.png')",
     right: '5vw',
     bottom: '-5vh',
     rotate: '0deg',
@@ -151,7 +151,7 @@ const friends = [
     aspectRatio: 1,
   },
   {
-    backgroundImage: "url('../assets/images/p5.png')",
+    backgroundImage: "url('@/assets/images/p5.png')",
     left: '0',
     top: '70vh',
     rotate: '0deg',
@@ -160,7 +160,7 @@ const friends = [
     aspectRatio: 1,
   },
   {
-    backgroundImage: "url('../assets/images/p6.png')",
+    backgroundImage: "url('@/assets/images/p6.png')",
     left: '86vw',
     top: '65vh',
     rotate: '0deg',
@@ -169,7 +169,7 @@ const friends = [
     aspectRatio: 1 / 2,
   },
   {
-    backgroundImage: "url('../assets/images/p7.png')",
+    backgroundImage: "url('@/assets/images/p7.png')",
     left: '20vw',
     bottom: '-15vh',
     rotate: '0deg',
@@ -178,7 +178,7 @@ const friends = [
     aspectRatio: 1 / 1.5,
   },
   {
-    backgroundImage: "url('../assets/images/p8.png')",
+    backgroundImage: "url('@/assets/images/p8.png')",
     left: '55vw',
     bottom: '10vh',
     rotate: '0deg',
@@ -187,7 +187,7 @@ const friends = [
     aspectRatio: 1,
   },
   {
-    backgroundImage: "url('../assets/images/p9.png')",
+    backgroundImage: "url('@/assets/images/p9.png')",
     right: '-5vw',
     top: '40vh',
     rotate: '0deg',
@@ -196,7 +196,7 @@ const friends = [
     aspectRatio: 1,
   },
   {
-    backgroundImage: "url('../assets/images/p10.png')",
+    backgroundImage: "url('@/assets/images/p10.png')",
     left: '-3vw',
     top: '-4.8vh',
     rotate: '180deg',
@@ -244,7 +244,7 @@ const rightTop = useTransform(scrollYProgress, [0.5, 0.9], ['30vh', '10vh'])
 const scrollDepth = useTransform(scrollYProgress, [0, 0.9, 1], [0, 0, 1])
 
 // ✅ 오디오 객체 만들기
-const birthdaySong = new Audio('../assets/audio/happy-birthday.mp3')
+const birthdaySong = new Audio('@/assets/audio/happy-birthday.mp3')
 birthdaySong.volume = 1 // 볼륨 조절 가능 (0 ~ 1)
 birthdaySong.loop = true // 볼륨 조절 가능 (0 ~ 1)
 
