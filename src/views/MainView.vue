@@ -97,7 +97,7 @@
         class="mt-4 border"
         style="width: 25vw; height: 25vh"
       ></canvas>
-      <button @click="didTakePhoto ? retryTakePhoto : takePhoto">
+      <button @click="didTakePhoto ? retryTakePhoto() : takePhoto()">
         📸 {{ didTakePhoto ? '다시찍기' : '촬영하기' }}
       </button>
     </div>
@@ -253,7 +253,7 @@ const isScrollEnd = ref(false)
 const isOpen = ref(false)
 
 useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-  if (latest >= 0.99) {
+  if (latest >= 0.9) {
     isScrollEnd.value = true
   }
 })
